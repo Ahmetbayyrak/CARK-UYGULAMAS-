@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Karar Çarkı</title><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEfUlEQVR42u3dsY1TURCF4RuxAQF0REoRiF6IqYCEMpDogzIIgdQgWVqtWHax/e7MnDPzX/2hozlf7Lfu7l4R/bPFCQgcBA4CB4GDwEHgIHAQOAgcBA4icBA4CBwEDgIHgYPAQeAgcLTq9dcPVwUOKMBlAI4IDQOtLEygpDMOBRMtlSxYQKQbDn0WDYgsTKCkAw53GXY+Fiwg4orj5+eX5zrJ+PHm/TlwbJDRFYe4j6XPopmPhzLEiSwXGb1xaPpYFiza+HhKhiaRZSTD3cd/Zaj5WF4yJuDQ8bG8ZPj6uFyGjo9lJ2MIDgUfy06Go48bZCj4WI4y5uCo9bEcZXj5OCKj1scyleHi47iMQh/LV8YoHCU+lq8MfR8bZZT4WNYypuFI9rGsZSj7iJCR7GO5yxiII81HBxyCPkJltMIRLUPNR7SMNB+rh4yBOBJ89MEh4iNNhj2OTBkDcUT7WG1kKPhIlhHtoxuOQh8lMixxVMkYiCPOR0McJT4KZZjhqJUxEEeQj9VPRr6PchlBPsABjnk40nyIyDDAoSMjx4eOjAgf4ABHCg41GdE+1GRs9wEOcMTj0JQR50NTxl4f4ADHbBzbfSjLkMMhLmOvD3EZG32AAxzg2OTDQoYQDhcZo3Bs8TELx0EfRjLAAQ5waPjwkgGOPB92MiRwOMr4C8fpieeO47iPoTjOPk4XPF8Z4Lix05UPHFNwnG564OiP43TggaMzjtPhBw5k4AMc4ADHRhl2PsABDnBoyPDyAQ5wgAMc4ABHBxzf336yKALHx3e/LAIHOMABDnCAAxzGPlxkgAMc4JDxYSQDHOCQxDHQxxwZ43Ac9OElAxx5PuxkgCPJh6MMcNzeiy/fLmHx52emMsBxu4z7nmFxHzgG+Xg4/CUNlDEUx7UyTH2AI0mGow9wgAMcAjLsfKj81SQ4+smYheO4DCMf4ACHAw59H7tkWPiQ+2rCHBn6PsABDh8csj4iZCj7EP3GGzjA4eQjToamD+nvyoIDHB4+omWo+TD4lv0oGVI+wAEOZxwKPjJliPiI2DEER7mPaTiCRmyII19GuQ8zHIU+puGIW7AbjioZhT4sceT7qJVR4iN0vlgcyT6m4Yjerg8OBRnJPuxxpPmYhiNhuAwcCT50ZOT4yFmtAw41GQk+WuEI9TENR9pkeTiCfGjKiPORuVcqjggfo3Akj5WNY68PZRnbfeQvVYBjo485OEpmqsGxxYe+jF0+qjYqw3HQh4uM4z4KB6rEccTHEBy16xTjuM2Hl4ybfZRPU4/jBh8TcCjsIoHjKh+OMq71ITKKCo7LfbTHobOIEI5LfPjKuNCH1BxaOJ4n4i7jeR+CQyjieMpHYxyaK4jieEykh4zHPpTvL43joY+WOMSPr47jXCcZ5yzO7oGjExGjgzvhaODD69pmOEyVmB7ZFYcLEevzeuNQJtLgsB1wSCnpdM9WOAqVtDxjTxwJVibcbQSO41xmXmkoDgIHgYPAQeAgcBA4CBwEDgIHETgIHAQOAgeBg8BB4CBwEDgIHDS6398f+OJcmjn6AAAAAElFTkSuQmCC">
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEfUlEQVR42u3dsY1TURCF4RuxAQF0REoRiF6IqYCEMpDogzIIgdQgWVqtWHax/e7MnDPzX/2hozlf7Lfu7l4R/bPFCQgcBA4CB4GDwEHgIHAQOAgcBA4icBA4CBwEDgIHgYPAQeAgcLTq9dcPVwUOKMBlAI4IDQOtLEygpDMOBRMtlSxYQKQbDn0WDYgsTKCkAw53GXY+Fiwg4orj5+eX5zrJ+PHm/TlwbJDRFYe4j6XPopmPhzLEiSwXGb1xaPpYFiza+HhKhiaRZSTD3cd/Zaj5WF4yJuDQ8bG8ZPj6uFyGjo9lJ2MIDgUfy06Go48bZCj4WI4y5uCo9bEcZXj5OCKj1scyleHi47iMQh/LV8YoHCU+lq8MfR8bZZT4WNYypuFI9rGsZSj7iJCR7GO5yxiII81HBxyCPkJltMIRLUPNR7SMNB+rh4yBOBJ89MEh4iNNhj2OTBkDcUT7WG1kKPhIlhHtoxuOQh8lMixxVMkYiCPOR0McJT4KZZjhqJUxEEeQj9VPRr6PchlBPsABjnk40nyIyDDAoSMjx4eOjAgf4ABHCg41GdE+1GRs9wEOcMTj0JQR50NTxl4f4ADHbBzbfSjLkMMhLmOvD3EZG32AAxzg2OTDQoYQDhcZo3Bs8TELx0EfRjLAAQ5waPjwkgGOPB92MiRwOMr4C8fpieeO47iPoTjOPk4XPF8Z4Lix05UPHFNwnG564OiP43TggaMzjtPhBw5k4AMc4ADHRhl2PsABDnBoyPDyAQ5wgAMc4ABHBxzf336yKALHx3e/LAIHOMABDnCAAxzGPlxkgAMc4JDxYSQDHOCQxDHQxxwZ43Ac9OElAxx5PuxkgCPJh6MMcNzeiy/fLmHx52emMsBxu4z7nmFxHzgG+Xg4/CUNlDEUx7UyTH2AI0mGow9wgAMcAjLsfKj81SQ4+smYheO4DCMf4ACHAw59H7tkWPiQ+2rCHBn6PsABDh8csj4iZCj7EP3GGzjA4eQjToamD+nvyoIDHB4+omWo+TD4lv0oGVI+wAEOZxwKPjJliPiI2DEER7mPaTiCRmyII19GuQ8zHIU+puGIW7AbjioZhT4sceT7qJVR4iN0vlgcyT6m4Yjerg8OBRnJPuxxpPmYhiNhuAwcCT50ZOT4yFmtAw41GQk+WuEI9TENR9pkeTiCfGjKiPORuVcqjggfo3Akj5WNY68PZRnbfeQvVYBjo485OEpmqsGxxYe+jF0+qjYqw3HQh4uM4z4KB6rEccTHEBy16xTjuM2Hl4ybfZRPU4/jBh8TcCjsIoHjKh+OMq71ITKKCo7LfbTHobOIEI5LfPjKuNCH1BxaOJ4n4i7jeR+CQyjieMpHYxyaK4jieEykh4zHPpTvL43joY+WOMSPr47jXCcZ5yzO7oGjExGjgzvhaODD69pmOEyVmB7ZFYcLEevzeuNQJtLgsB1wSCnpdM9WOAqVtDxjTxwJVibcbQSO41xmXmkoDgIHgYPAQeAgcBA4CBwEDgIHETgIHAQOAgeBg8BB4CBwEDgIHDS6398f+OJcmjn6AAAAAElFTkSuQmCC">
+<title>Karar Çarkı</title>
 <meta name="theme-color" content="#07070f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Karar Çarkı">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEfUlEQVR42u3dsY1TURCF4RuxAQF0REoRiF6IqYCEMpDogzIIgdQgWVqtWHax/e7MnDPzX/2hozlf7Lfu7l4R/bPFCQgcBA4CB4GDwEHgIHAQOAgcBA4icBA4CBwEDgIHgYPAQeAgcLTq9dcPVwUOKMBlAI4IDQOtLEygpDMOBRMtlSxYQKQbDn0WDYgsTKCkAw53GXY+Fiwg4orj5+eX5zrJ+PHm/TlwbJDRFYe4j6XPopmPhzLEiSwXGb1xaPpYFiza+HhKhiaRZSTD3cd/Zaj5WF4yJuDQ8bG8ZPj6uFyGjo9lJ2MIDgUfy06Go48bZCj4WI4y5uCo9bEcZXj5OCKj1scyleHi47iMQh/LV8YoHCU+lq8MfR8bZZT4WNYypuFI9rGsZSj7iJCR7GO5yxiII81HBxyCPkJltMIRLUPNR7SMNB+rh4yBOBJ89MEh4iNNhj2OTBkDcUT7WG1kKPhIlhHtoxuOQh8lMixxVMkYiCPOR0McJT4KZZjhqJUxEEeQj9VPRr6PchlBPsABjnk40nyIyDDAoSMjx4eOjAgf4ABHCg41GdE+1GRs9wEOcMTj0JQR50NTxl4f4ADHbBzbfSjLkMMhLmOvD3EZG32AAxzg2OTDQoYQDhcZo3Bs8TELx0EfRjLAAQ5waPjwkgGOPB92MiRwOMr4C8fpieeO47iPoTjOPk4XPF8Z4Lix05UPHFNwnG564OiP43TggaMzjtPhBw5k4AMc4ADHRhl2PsABDnBoyPDyAQ5wgAMc4ABHBxzf336yKALHx3e/LAIHOMABDnCAAxzGPlxkgAMc4JDxYSQDHOCQxDHQxxwZ43Ac9OElAxx5PuxkgCPJh6MMcNzeiy/fLmHx52emMsBxu4z7nmFxHzgG+Xg4/CUNlDEUx7UyTH2AI0mGow9wgAMcAjLsfKj81SQ4+smYheO4DCMf4ACHAw59H7tkWPiQ+2rCHBn6PsABDh8csj4iZCj7EP3GGzjA4eQjToamD+nvyoIDHB4+omWo+TD4lv0oGVI+wAEOZxwKPjJliPiI2DEER7mPaTiCRmyII19GuQ8zHIU+puGIW7AbjioZhT4sceT7qJVR4iN0vlgcyT6m4Yjerg8OBRnJPuxxpPmYhiNhuAwcCT50ZOT4yFmtAw41GQk+WuEI9TENR9pkeTiCfGjKiPORuVcqjggfo3Akj5WNY68PZRnbfeQvVYBjo485OEpmqsGxxYe+jF0+qjYqw3HQh4uM4z4KB6rEccTHEBy16xTjuM2Hl4ybfZRPU4/jBh8TcCjsIoHjKh+OMq71ITKKCo7LfbTHobOIEI5LfPjKuNCH1BxaOJ4n4i7jeR+CQyjieMpHYxyaK4jieEykh4zHPpTvL43joY+WOMSPr47jXCcZ5yzO7oGjExGjgzvhaODD69pmOEyVmB7ZFYcLEevzeuNQJtLgsB1wSCnpdM9WOAqVtDxjTxwJVibcbQSO41xmXmkoDgIHgYPAQeAgcBA4CBwEDgIHETgIHAQOAgeBg8BB4CBwEDgIHDS6398f+OJcmjn6AAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEfUlEQVR42u3dsY1TURCF4RuxAQF0REoRiF6IqYCEMpDogzIIgdQgWVqtWHax/e7MnDPzX/2hozlf7Lfu7l4R/bPFCQgcBA4CB4GDwEHgIHAQOAgcBA4icBA4CBwEDgIHgYPAQeAgcLTq9dcPVwUOKMBlAI4IDQOtLEygpDMOBRMtlSxYQKQbDn0WDYgsTKCkAw53GXY+Fiwg4orj5+eX5zrJ+PHm/TlwbJDRFYe4j6XPopmPhzLEiSwXGb1xaPpYFiza+HhKhiaRZSTD3cd/Zaj5WF4yJuDQ8bG8ZPj6uFyGjo9lJ2MIDgUfy06Go48bZCj4WI4y5uCo9bEcZXj5OCKj1scyleHi47iMQh/LV8YoHCU+lq8MfR8bZZT4WNYypuFI9rGsZSj7iJCR7GO5yxiII81HBxyCPkJltMIRLUPNR7SMNB+rh4yBOBJ89MEh4iNNhj2OTBkDcUT7WG1kKPhIlhHtoxuOQh8lMixxVMkYiCPOR0McJT4KZZjhqJUxEEeQj9VPRr6PchlBPsABjnk40nyIyDDAoSMjx4eOjAgf4ABHCg41GdE+1GRs9wEOcMTj0JQR50NTxl4f4ADHbBzbfSjLkMMhLmOvD3EZG32AAxzg2OTDQoYQDhcZo3Bs8TELx0EfRjLAAQ5waPjwkgGOPB92MiRwOMr4C8fpieeO47iPoTjOPk4XPF8Z4Lix05UPHFNwnG564OiP43TggaMzjtPhBw5k4AMc4ADHRhl2PsABDnBoyPDyAQ5wgAMc4ABHBxzf336yKALHx3e/LAIHOMABDnCAAxzGPlxkgAMc4JDxYSQDHOCQxDHQxxwZ43Ac9OElAxx5PuxkgCPJh6MMcNzeiy/fLmHx52emMsBxu4z7nmFxHzgG+Xg4/CUNlDEUx7UyTH2AI0mGow9wgAMcAjLsfKj81SQ4+smYheO4DCMf4ACHAw59H7tkWPiQ+2rCHBn6PsABDh8csj4iZCj7EP3GGzjA4eQjToamD+nvyoIDHB4+omWo+TD4lv0oGVI+wAEOZxwKPjJliPiI2DEER7mPaTiCRmyII19GuQ8zHIU+puGIW7AbjioZhT4sceT7qJVR4iN0vlgcyT6m4Yjerg8OBRnJPuxxpPmYhiNhuAwcCT50ZOT4yFmtAw41GQk+WuEI9TENR9pkeTiCfGjKiPORuVcqjggfo3Akj5WNY68PZRnbfeQvVYBjo485OEpmqsGxxYe+jF0+qjYqw3HQh4uM4z4KB6rEccTHEBy16xTjuM2Hl4ybfZRPU4/jBh8TcCjsIoHjKh+OMq71ITKKCo7LfbTHobOIEI5LfPjKuNCH1BxaOJ4n4i7jeR+CQyjieMpHYxyaK4jieEykh4zHPpTvL43joY+WOMSPr47jXCcZ5yzO7oGjExGjgzvhaODD69pmOEyVmB7ZFYcLEevzeuNQJtLgsB1wSCnpdM9WOAqVtDxjTxwJVibcbQSO41xmXmkoDgIHgYPAQeAgcBA4CBwEDgIHETgIHAQOAgeBg8BB4CBwEDgIHDS6398f+OJcmjn6AAAAAElFTkSuQmCC">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
@@ -236,31 +237,6 @@ no.ontouchstart=e=>{e.preventDefault();dodge()};
 $('modal').addEventListener('click',e=>{if(e.target.id==='modal'){$('rule').textContent='Dışarı tıklayarak da kaçamazsın. "Kaderime Razıyım" de. 🔒'}});
 
 addEventListener('resize',()=>{size();fsize()});
-
-// ---------- Uygulama ikonu (dosyasız) ----------
-(function(){
-  const c=document.createElement('canvas');c.width=c.height=512;
-  const x=c.getContext('2d');
-  x.fillStyle='#07070f';x.fillRect(0,0,512,512);
-  ['#8b5cf6','#06b6d4','#ec4899','#f59e0b','#10b981','#f43f5e'].forEach((col,i)=>{
-    x.beginPath();x.moveTo(256,256);
-    x.arc(256,256,200,i*Math.PI/3,(i+1)*Math.PI/3);
-    x.closePath();x.fillStyle=col;x.fill();
-  });
-  x.beginPath();x.arc(256,256,40,0,7);x.fillStyle='#fff';x.fill();
-  const url=c.toDataURL('image/png');
-  ['icon','apple-touch-icon'].forEach(rel=>{
-    const l=document.createElement('link');
-    l.rel=rel;l.href=url;document.head.append(l);
-  });
-  const man={name:'Karar Çarkı',short_name:'Çark',start_url:location.href,
-    display:'standalone',background_color:'#07070f',theme_color:'#07070f',
-    icons:[{src:url,sizes:'512x512',type:'image/png'}]};
-  const ml=document.createElement('link');ml.rel='manifest';
-  ml.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(man));
-  document.head.append(ml);
-})();
-
 fsize();size();render();
 </script>
 </body>
